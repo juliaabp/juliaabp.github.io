@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: bungee;
   src: url(fonts/Bungee.ttf)
@@ -22,20 +26,26 @@
 }
 
 h1 {
-	font-family: "bungee";
-  color:#A6A39E;
+  font-family: "bungee";
+  color: #A6A39E;
   font-size: 75px;
   line-height: 70px;
 }
 
-h2 {
+h2,
+h3 {
   font-family: "introRegular";
-  color:#000;
+  color: #000;
   font-size: 27px;
 
 }
 
-p { 
+h4 {
+  font-family: "quicks";
+  font-size: 18px;
+}
+
+p {
   font-family: "quicks";
   font-size: 22px;
 }
@@ -78,13 +88,13 @@ p {
   width: 200px;
   height: 100vh;
   padding-top: 100px;
-  background-color:#e4e1dd;
+  background-color: #e4e1dd;
   opacity: 0.7;
   margin-left: -300px;
   transition: all ease .2s;
 }
 
-.menu .menu-hamburguer:checked ~ ul {
+.menu .menu-hamburguer:checked~ul {
   margin-left: 0;
 }
 
@@ -128,7 +138,80 @@ p {
 }
 
 .title {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+
+.aboutContainer {
+  padding-top: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.about {
+  text-align: center;
+  padding: 40px;
+}
+
+.aboutRow {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.avatar {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.progress-bar {
+  width: 300px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #dbdbdb;
+}
+
+.progress-bar div {
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgb(117, 117, 117);
+}
+
+.aboutSkills {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 35%;
+  margin: 2px;
+  padding: 20px;
+}
+
+.aboutPersonal {
+  text-align: center;
+  width: 60%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.phrase {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  display: inline-block;
+  animation: pisca normal infinite .8s, escrever normal 5s steps(55) both;
+  animation-iteration-count: infinite;
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes pisca {
+  100% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes escrever {
+  100% {
+    max-width: 100%;
+  }
 }
 
 /* Medias */
