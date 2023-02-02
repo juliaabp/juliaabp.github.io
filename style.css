@@ -152,21 +152,22 @@ p {
   padding: 40px;
 }
 
+.avatar {
+  padding-bottom: 30px;
+}
+
 .aboutRow {
   display: flex;
   flex-flow: row wrap;
 }
 
-.avatar {
-  padding-bottom: 20px;
-  text-align: center;
-}
-
 .progress-bar {
-  width: 300px;
-  height: 20px;
+  width: 250px;
+  height: 15px;
   border-radius: 10px;
   background-color: #dbdbdb;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .progress-bar div {
@@ -176,19 +177,16 @@ p {
 }
 
 .aboutSkills {
-  display: flex;
-  justify-content: center;
   text-align: center;
   width: 35%;
-  margin: 2px;
-  padding: 20px;
+  padding-top: 20px;
 }
 
 .aboutPersonal {
   text-align: center;
   width: 60%;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  padding-top: 55px;
+
 }
 
 .phrase {
@@ -214,10 +212,50 @@ p {
   }
 }
 
+.footer {
+  background-color: #dbdbdb;
+  height: 100%;
+}
+
+.contact {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.contactContent {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.link {
+  margin: 30px;
+}
+
+.footerText {
+  text-align: center;
+  font-size: 15px;
+  padding-bottom: 3px;
+}
+
 /* Medias */
-@media screen and (min-width: 768px) {
-  nav {
+@media (min-width: 768px) {
+  .aboutContainer {
     flex-direction: row;
     justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .aboutContainer,
+  .aboutSkills,
+  .aboutPersonal {
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .aboutContainer {
+    box-shadow: none;
   }
 }
